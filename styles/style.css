@@ -1,68 +1,59 @@
 
 .header {
-  display: flex;
-  padding: 92px 26px;
+  display: grid;
+  grid-template-columns: 1fr min-content 1fr;
+  justify-items: center;
+  padding: 92px 28px 92px 20px;
   font-size: 18px;
-  align-items: center;
 }
 
 .header__menu {
   text-decoration: none;
-  padding-left: 28px;
+  padding: 35px;
+  padding-top: 55px;
 } 
 
 .header__links-list {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  gap: 31px;
+  gap: 32px;
   list-style: circle;
 }
   
 .header__links-list-item_no-bullit {
-  list-style-type: none;
+  list-style: none;
 }
  
 .header__links-list-item {
   position: relative;
 }
 
-.header__links-list-item:before {
-  position: relative;
-  top: 50%;
-  right: -22px;
-  width: 7px;
-  display:flex;
-  border: 1px solid black;
-  border-radius: 50%;
-}
-
-.header__links-list-item:last-child:before {
-  display: none;
-}
-
 .header__logo {
-  flex: 0 0 auto;
-  width: 17%;
-  padding-left: 42px;
+  width: 137px;
+  height: 108px;
+  padding-left: 4px;
+  padding-top: 15px;
 }
 
 .header__address {
-  padding-left: 196px;
   line-height: 1.4;
   letter-spacing: 0.15px;
   text-underline-offset: 4px;
   font-style: normal;
+  margin-left: 90px;
 }
 
 .cover {
   position: relative; 
+  display: flex;
+  flex-direction: column;
   z-index: 1; 
   width: 1100px;
   height: 757px;
   background: url(../images/cover.jpg) center no-repeat; 
   background-size: cover;
-  background-position: -135px;
+  padding: 155px 0px;
+  padding-right: 10px;
+  padding-left: 32px;
 }
 
 .overlay {
@@ -75,42 +66,40 @@
 }
 
 .cover__title {
-  display: block;
+  display: flex;
+  flex-direction: column;
   color: rgb(255, 255, 255);
   font-size: 100px;
-  font-weight: bold;
+  font-weight: 700;
   text-transform: uppercase;
-  margin-bottom: 123px;
-  padding: 178px 0px 0px;
-  padding-right: 20px;
-  padding-left: 55px;
+  gap: 20px;
   z-index: 1;
   position: relative;
+  letter-spacing: 0.3em;
+  padding: 10px;
 }
 
 .cover__description {
   display: flex;
   position: relative;
-  flex-direction: row;
   justify-content: space-between;
-  align-items: center;
   z-index: 1;
+  padding-top:120px;
+  padding-left: 45px;
+  padding-right: 43px;
 }
   
 .cover__description-text {
   display: block;
   color: rgb(255, 255, 255);
   font-size: 22px;
-  font-weight: 400;
-  text-align: left;
+  font-weight: 10;
   text-transform: uppercase;
-  word-spacing: 16px;
-  padding-left:76px;
-  padding-top:10px;
-}
-
-.cover__description-text_additional-word-spacing {
   word-spacing: 20px;
+  text-align: center;
+  line-height: 28px;
+  word-spacing: 20px;
+  padding-top: 15px;
 }
 
 .letter-spacing-extended {
@@ -118,27 +107,21 @@
 }
 
 .no-letter-spacing {
-  letter-spacing: 0;
+  letter-spacing: initial;
 }
 
 .aligned-text {
-  display: block;
-  line-height: 116%;
-  letter-spacing: 0.3em;
   text-align: left;
 }
 
 .aligned-text_center {
-  display: block;
+  line-height: 100px;
   text-align: center;
-  padding-right: 45px;
-  letter-spacing: 0.3em;
 }
 
 .aligned-text_right {
-  display: block;
+  line-height: 100px;
   text-align: right;
-  letter-spacing: 0.3em;
 }
 
 .bet-button {
@@ -147,12 +130,14 @@
   color: rgb(255, 255, 255);
   font-size: 22px;
   font-weight: 500;
-  line-height: 29px;
+  line-height: 50px;
   text-align: center;
   text-transform: uppercase;
-  padding: 16px 40px 11px 31px;
-  margin-right: 45px;
-  line-height: 26px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 14px;
+  padding-bottom: 7px;
+  line-height: 29px;
 }
 
 .card { 
@@ -198,7 +183,6 @@
 
 .lots__look-more-link {
   padding: 45px;
-  border: 1px;
   word-spacing: 5px;
   font-family: Raleway,sans-serif;
   font-size: 20px;
@@ -233,11 +217,13 @@
 }
 
 .about {
+  position: relative;
   display: grid;
   grid-template-columns: 320px auto;
-  padding: 181px 32px;
+  padding: 175px 33px;
   margin-right: 50px;
   gap: 22px;
+  margin: 7px 0px 10px;
 }
 
 .about__logo {
@@ -278,9 +264,9 @@
   font-size: 40px;
   line-height: 47px;
   text-transform: uppercase;
-  padding-top: 110px;
+  padding-top: 108px;
   padding-left: 7px;
-  padding-bottom: 92px;
+  padding-bottom: 90px;
 }
 
 .about__text {
@@ -293,18 +279,20 @@
 .footer {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  padding: 0px 70px 70px 80px;
-  position: absolute;
-  top: 2845px;
   gap: 100px;
 }
  
 .footer__menu {
   display: flex;
   justify-content: center;
-  padding-right: 36px;
+  padding: 20px;
 }
-  
+
+.address {
+padding-top: 20px;
+padding-left: 50px;
+} 
+
 .footer__menu-list {
   list-style: none;
 }
@@ -323,13 +311,14 @@
   
 .footer__menu-link {
     text-decoration: underline;
-    text-underline-offset: 5px;
+    text-underline-offset: 6px;
 }
   
 .footer__social-list {
   display: flex;
-  justify-content: flex-start;
-  padding: 0px 10px;
+  justify-content: flex-end;
+  padding-top: 20px;
+  padding-right: 50px;
   gap: 48px;
 }
   
